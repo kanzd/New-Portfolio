@@ -7,7 +7,10 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "lottie": "^0.0.1",
+    "lottie-react": "^2.4.0",
     "next": "latest",
+    "pdf-viewer-reactjs": "^2.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

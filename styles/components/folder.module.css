@@ -1,0 +1,20 @@
+.FolderRoot{
+    width: 100%;
+    margin:8px 0;
+}
+.FolderImage{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.FolderTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 20px;
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: #fff;
+    margin:8px 0;
+    padding:1px 16px;
+}

@@ -1,13 +1,59 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import Wrapper from "../components/Wrapper";
+import Navbar from '../components/Navbar';
+import Styles from '../styles/pages/root.module.css';
+import Folder from "../components/Folder";
+import Popup from "../components/Popup";
+import { useEffect, useMemo, useRef, useState } from "react";
+import Lottie from "lottie-react";
+import Animation from "../assets/animation_lng5iy9f.json";
+const IndexPage = () => {
+  const [type, setType] = useState<"Details"|"Folder">("Details");
+  const [showPopup, setShowPopup] = useState(true);
+  const ref = useRef(null);
+  const onOutSideClick = useMemo(() => {
+    return () => setShowPopup(false);
+  }, [])
+  useEffect(() => {
+    const handleClickOutside = (event: { target: any }) => {
+      if (!(ref.current as any)?.contains(event.target)) {
+        onOutSideClick();
+      }
+    };
+    document.addEventListener('click', handleClickOutside, true);
+    return () => {
+      document.removeEventListener('click', handleClickOutside, true);
+    };
+  }, []);
+  return (
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">About</Link>
-    </p>
-  </Layout>
-)
+    <div>
+      <Wrapper>
+        {showPopup && <div ref={ref} className={Styles.PopupWrapper}>
+          <Popup onClose={()=>{
+             setShowPopup(false);
+          }} type={type}></Popup>
+        </div>}
+
+        <Navbar></Navbar>
+        <div className={Styles.FolderStuctureWrapper}>
+        {/* <div className={Styles.AnimationWrapper}>
+          <Lottie animationData={Animation} loop={false} />
+          </div> */}
+          <div className={Styles.FolderStucture}>
+            <Folder onClick={() => {
+              setShowPopup(true);
+              setType("Details")
+            }} folderName="Read Me" folderType="file"></Folder>
+            <Folder onClick={() => {
+              setShowPopup(true);
+              setType("Folder");
+            }} folderName="My Files" folderType="folder"></Folder>
+          </div>
+          
+        </div>
+      </Wrapper>
+    </div>
+  )
+}
 
 export default IndexPage

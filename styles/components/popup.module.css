@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Chicago';
+    src: url('../../fonts/ChicagoFLF.ttf') format('woff');
+  }
+.PopupRoot{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    box-shadow: 10px 10px;
+    background-color: #FFFFFF;
+    border:3px solid black;
+}
+.PopupHeaderLinesRoot{
+    margin:8px;
+}
+.PopupHeaderLines{
+    border:2px solid black;
+    margin:3px;
+}
+.PopupHeaderRoot{
+    display: flex;
+    flex-direction: row;
+    border-bottom:3px solid black;
+
+}
+.PopupHeaderTitle{
+    font-size: 24px;
+    margin:0 30px;
+    text-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: Chicago,Verdana, Tahoma, sans-serif;
+}
+.PopupBoxWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.PopupBox{
+    border: 3px solid black;
+    height:30px;
+    width:30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+.PopupBox:hover{
+    background-color: black;
+    color:#FFFFFF;
+}
+.PopupBody{
+    height:600px;
+    width: 100%;
+    overflow: scroll;
+}
+.PopupBodyInner{
+    margin:64px 48px;
+}
+.PopupBodyFolderInner{
+    display: flex;
+    flex-direction: row;
+    
+}
+.PopupBodyInnerTitle{
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 40px;
+    margin:16px 0 -8px 0;
+}
+.PopupBodyInnerSubTitle{
+    font-size: 20px;
+    font-weight: bold;
+}
+.PopupTitles{
+    margin:16px 0;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 20px;
+}

@@ -1,0 +1,25 @@
+.FolderStucture{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0 16px;
+}
+.FolderStuctureWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.PopupWrapper{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.AnimationWrapper{
+    width: calc(100% - 100px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
