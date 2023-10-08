@@ -1,5 +1,21 @@
 .InnerComponentRoot{
     display: flex;
     flex-direction: row;
-    
+
+}
+.PdfInner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.PdfButton{
+    margin:4px 0 24px 0;
+    border:2px solid black;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+.PdfButton:hover{
+    background-color: black;
+    color:#FFFFFF;
 }

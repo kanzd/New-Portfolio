@@ -1,0 +1,24 @@
+.projectRoot{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.projectDetailRoots{
+    display: flex;
+    flex-direction: column;
+    margin:64px 48px;
+
+}
+.projectDetailContentWrapper{
+    font-family: Verdana, Tahoma, sans-serif;
+    margin:20px;
+}
+.projectDetailsHeading{
+    font-size: 40px;
+    font-weight: bold;
+}
+.projectDetailsHeadingTitle{
+    font-size: 20px;
+    font-weight: bold;
+}

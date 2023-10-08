@@ -1,6 +1,7 @@
 .FolderRoot{
     width: 100%;
     margin:8px 0;
+    cursor: pointer;
 }
 .FolderImage{
     display: flex;
