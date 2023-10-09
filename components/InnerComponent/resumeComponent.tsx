@@ -13,10 +13,10 @@ export default function ResumeComponent() {
         a.click();
         document.body.removeChild(a);
     };
-        return (
-            <div className={Styles.PdfInner}>
-                <style>
-                    {`
+    return (
+        <div className={Styles.PdfInner}>
+            <style>
+                {`
           .react-pdf__Page__textContent {
             display: none !important;
           }
@@ -24,12 +24,12 @@ export default function ResumeComponent() {
             display: none !important;
           }
         `}
-                </style>
-                <Document file={"Resume.pdf"} renderMode='svg'>
-                    <Page pageIndex={0} />
-                </Document>
-                <button className={Styles.PdfButton} onClick={handleDownload}>Download Resume</button>
-                {/* <a href={"Resume.pdf"}></a> */}
-            </div>
-        );
+            </style>
+            <Document file={"Resume.pdf"} renderMode='svg'>
+                <Page  pageIndex={0} />
+            </Document>
+            <button className={Styles.PdfButton} onClick={handleDownload}>Download Resume</button>
+            {/* <a href={"Resume.pdf"}></a> */}
+        </div>
+    );
 }

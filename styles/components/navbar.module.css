@@ -75,6 +75,9 @@
     
     
 }
+.NavbarTralingItem:hover{
+    cursor: pointer;
+}
 .Traling1{
     background-color: #f37725;
     animation: WidthTranslation 1s ease-in-out;
@@ -86,4 +89,56 @@
 .Traling3{
     background-color: #282725;
     animation: WidthTranslation 1s ease-in-out 0.7s;
+}
+.NavbarMenuWrapper{
+    position: relative;
+    top:0;
+    left:0;
+}
+.NavbarMenuDrawer{
+    display: none;
+    position: absolute;
+    top:10;
+    left:0;
+}
+.NavbarItems{
+    font-family: Chicago;
+    font-size: 32px;
+    background-color: white;
+    padding:8px;
+    cursor: pointer;
+}
+.NavbarItems:hover{
+    background-color: black;
+    color:white;
+}
+.NavbarItemsLines{
+    border-bottom: 1px dotted black;
+    padding:24px 8px;
+}
+.NavbarMenuDrawer{
+    border: 4px solid black;
+    box-shadow: 10px 10px;
+}
+.NavbarMenuWrapper:hover .NavbarMenuDrawer{
+    display: block;
+}
+.NavbarHambugerIcon{
+    display: none;
+}
+@media screen and (max-width:600px){
+    .NavbarIcon{
+        display: none;
+    }
+    .NavbarMenu{
+        display: none;
+    }
+    .NavbarHambugerIcon{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin:0 32px;
+    }
 }

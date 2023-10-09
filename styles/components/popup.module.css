@@ -10,6 +10,7 @@
     box-shadow: 10px 10px;
     background-color: #FFFFFF;
     border:3px solid black;
+
 }
 .PopupHeaderLinesRoot{
     margin:8px;
@@ -22,7 +23,6 @@
     display: flex;
     flex-direction: row;
     border-bottom:3px solid black;
-
 }
 .PopupHeaderTitle{
     font-size: 24px;
@@ -82,4 +82,26 @@
     margin:16px 0;
     font-family: Verdana, Tahoma, sans-serif;
     font-size: 20px;
+}
+@media screen and (max-width:600px){
+    .PopupRoot{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        box-shadow: 10px 10px;
+        background-color: #FFFFFF;
+        border:3px solid black;
+        width: 100vw;
+    }
+    .PopupHeaderRoot{
+        display: flex;
+        flex-direction: row;
+        border-bottom:3px solid black;
+        width: 100vw;
+    }
+    .PopupHeaderLinesRoot{
+       display: none;
+    }
+    
 }

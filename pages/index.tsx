@@ -11,6 +11,7 @@ const IndexPage = () => {
   const [showPopup, setShowPopup] = useState(true);
   const [headerTitle, setHeaderTitle] = useState('');
   const ref = useRef(null);
+  const [bgColor, setBgColor] = useState("#848482");
   const onOutSideClick = useMemo(() => {
     return () => setShowPopup(false);
   }, [])
@@ -28,14 +29,20 @@ const IndexPage = () => {
   return (
 
     <div>
-      <Wrapper>
+      <Wrapper customStyles={{ backgroundColor: bgColor }}>
         {showPopup && <div ref={ref} className={Styles.PopupWrapper}>
           <Popup headerTitle={headerTitle} onClose={() => {
             setShowPopup(false);
           }} type={type}></Popup>
         </div>}
 
-        <Navbar></Navbar>
+        <Navbar traling1onClick={() => {
+          setBgColor("#f37725");
+        }} traling2onClick={function (): void {
+          setBgColor("#3685c5");
+        }} traling3onClick={function (): void {
+          setBgColor("#848482");
+        }}></Navbar>
         <div className={Styles.FolderStuctureWrapper}>
           {/* <div className={Styles.AnimationWrapper}>
           <Lottie animationData={Animation} loop={false} />
