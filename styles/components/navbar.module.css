@@ -100,6 +100,7 @@
     position: absolute;
     top:10;
     left:0;
+    z-index: 10;
 }
 .NavbarItems{
     font-family: Chicago;
@@ -140,10 +141,20 @@
         margin:0 32px;
     }
     .NavbarHamburgerMenu{
+        display: none;
         position: absolute;
         top:10;
         left:0;
         border: 5px solid black;
+    }
+    .NavbarHambugerIconRoot{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center    
+    }
+    .NavbarHambugerIcon:hover .NavbarHamburgerMenu{
+        display: block;
     }
     .NavbarMenuItem{
         background-color: #FFFFFF;

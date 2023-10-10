@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Chicago';
+    src: url('../../fonts/ChicagoFLF.ttf') format('woff');
+  }
+.loadingRoot{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+.loadingText{
+    font-family: Chicago,Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+}

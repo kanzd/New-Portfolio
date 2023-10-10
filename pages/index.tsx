@@ -6,14 +6,23 @@ import Popup from "../components/Popup";
 import { useEffect, useMemo, useRef, useState } from "react";
 import Lottie from "lottie-react";
 import Animation from "../assets/animation_lng5iy9f.json";
+import LoaderComponent from "../components/Loading";
+import Power from "../components/PowerOn";
 const IndexPage = () => {
   const [type, setType] = useState<"Details" | "Folder">("Details");
   const [showPopup, setShowPopup] = useState(true);
   const [headerTitle, setHeaderTitle] = useState('');
   const ref = useRef(null);
   const [bgColor, setBgColor] = useState("#848482");
+  const [loader, setLoader] = useState(true);
+  const [shutdown, setShutdown] = useState(false);
   const onOutSideClick = useMemo(() => {
     return () => setShowPopup(false);
+  }, [])
+  useEffect(() => {
+    setTimeout(() => {
+      setLoader(false);
+    }, 3000);
   }, [])
   useEffect(() => {
     const handleClickOutside = (event: { target: any }) => {
@@ -26,8 +35,11 @@ const IndexPage = () => {
       document.removeEventListener('click', handleClickOutside, true);
     };
   }, []);
+  if (loader) return <LoaderComponent></LoaderComponent>;
+  if (shutdown) return <Power onPowerOn={() => {
+    window.location.reload();
+  }}></Power>;
   return (
-
     <div>
       <Wrapper customStyles={{ backgroundColor: bgColor }}>
         {showPopup && <div ref={ref} className={Styles.PopupWrapper}>
@@ -36,7 +48,13 @@ const IndexPage = () => {
           }} type={type}></Popup>
         </div>}
 
-        <Navbar traling1onClick={() => {
+        <Navbar onShutdown={() => {
+          setShutdown(true);
+        }} onReadMeClick={() => {
+          setShowPopup(true);
+          setType("Details")
+          setHeaderTitle("Read Me");
+        }} traling1onClick={() => {
           setBgColor("#f37725");
         }} traling2onClick={function (): void {
           setBgColor("#3685c5");

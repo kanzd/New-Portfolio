@@ -1,0 +1,28 @@
+.PowerRoot{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.PowerOnWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+.PowerOnImage{
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.5s;
+    border-radius: 30px;
+    
+    
+}
+.PowerOnImage:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 1px 20px 20px white;
+    border-radius: 30px;
+   
+
+}
