@@ -25,8 +25,8 @@ export default function ResumeComponent() {
           }
         `}
             </style>
-            <Document file={"Resume.pdf"} renderMode='svg'>
-                <Page  pageIndex={0} />
+            <Document file={"Resume.pdf"} renderMode='canvas'>
+                <Page pageIndex={0} />
             </Document>
             <button className={Styles.PdfButton} onClick={handleDownload}>Download Resume</button>
             {/* <a href={"Resume.pdf"}></a> */}
