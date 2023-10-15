@@ -7,10 +7,10 @@ interface NavbarProps {
     traling2onClick: () => void,
     traling3onClick: () => void
     onReadMeClick: MouseEventHandler<HTMLDivElement>;
-    onShutdown : MouseEventHandler<HTMLDivElement>;
+    onShutdown: MouseEventHandler<HTMLDivElement>;
 }
 
-export default function Navbar({ traling1onClick, traling2onClick, traling3onClick, onReadMeClick,onShutdown }: NavbarProps) {
+export default function Navbar({ traling1onClick, traling2onClick, traling3onClick, onReadMeClick, onShutdown }: NavbarProps) {
     return (
         <div className={Styles.NavbarRoot}>
             <div className={Styles.NavbarHambugerIconRoot}>
@@ -23,8 +23,10 @@ export default function Navbar({ traling1onClick, traling2onClick, traling3onCli
                             </div>
                             <div className={Styles.NavbarMenuDrawer}>
                                 <div className={`${Styles.NavbarItems} ${Styles.NavbarItemsLines}`} onClick={onReadMeClick}>Read Me</div>
-                                <div className={Styles.NavbarItems}>Logout</div>
-                                <div className={Styles.NavbarItems}>Restart</div>
+
+                                <div className={Styles.NavbarItems} onClick={() => {
+                                    window.location.reload();
+                                }}>Restart</div>
                                 <div className={Styles.NavbarItems} onClick={onShutdown}>Shutdown</div>
                             </div>
                         </div>
@@ -39,6 +41,9 @@ export default function Navbar({ traling1onClick, traling2onClick, traling3onCli
                                 <div className={Styles.NavbarItems} onClick={() => {
                                     window.location.href = "https://github.com/kanzd";
                                 }}>Github</div>
+                                <div className={Styles.NavbarItems} onClick={() => {
+                                    window.location.href = "https://leetcode.com/algokanzd/";
+                                }}>Leetcode</div>
 
                             </div>
                         </div>
@@ -56,8 +61,8 @@ export default function Navbar({ traling1onClick, traling2onClick, traling3onCli
                     </div>
                     <div className={Styles.NavbarMenuDrawer}>
                         <div className={`${Styles.NavbarItems} ${Styles.NavbarItemsLines}`} onClick={onReadMeClick}>Read Me</div>
-                        <div className={Styles.NavbarItems}>Logout</div>
-                        <div className={Styles.NavbarItems} onClick={()=>{
+
+                        <div className={Styles.NavbarItems} onClick={() => {
                             window.location.reload();
                         }}>Restart</div>
                         <div className={Styles.NavbarItems} onClick={onShutdown}>Shutdown</div>
@@ -75,6 +80,9 @@ export default function Navbar({ traling1onClick, traling2onClick, traling3onCli
                         <div className={Styles.NavbarItems} onClick={() => {
                             window.location.href = "https://github.com/kanzd";
                         }}>Github</div>
+                        <div className={Styles.NavbarItems} onClick={() => {
+                            window.location.href = "https://leetcode.com/algokanzd/";
+                        }}>Leetcode</div>
 
                     </div>
                 </div>
