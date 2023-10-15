@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import Styles from "../../styles/components/rootinner.module.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -13,6 +13,7 @@ export default function ResumeComponent() {
         a.click();
         document.body.removeChild(a);
     };
+    const [scale, setScale] = useState(0.6);
     return (
         <div className={Styles.PdfInner}>
             <style>
@@ -26,8 +27,20 @@ export default function ResumeComponent() {
         `}
             </style>
             <Document file={"Resume.pdf"} renderMode='svg'>
-                <Page scale={0.7} pageIndex={0} />
+                <Page scale={scale} pageIndex={0} />
             </Document>
+            <div className={Styles.PdfScale}>
+                <div className={Styles.PdfScaleButton} onClick={() => {
+                    setScale(scale - 0.1);
+                }}>
+                    -
+                </div>
+                <div className={Styles.PdfScaleButton} onClick={() => {
+                    setScale(scale + 0.1);
+                }}>
+                    +
+                </div>
+            </div>
             <button className={Styles.PdfButton} onClick={handleDownload}>Download Resume</button>
             {/* <a href={"Resume.pdf"}></a> */}
         </div>
