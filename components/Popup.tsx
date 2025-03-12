@@ -29,6 +29,24 @@ interface PopupBodyProps {
     setBackButton: Dispatch<SetStateAction<boolean>>;
 }
 const projectDetails = {
+    "Pipeline Promotion": {
+        heading: "Pipeline Promotion",
+        title: "This functionality empowers users by allowing them to seamlessly promote a pipeline to their specified environment while ensuring that all associated configurations are correctly applied in Kelsa Platform.",
+        subtitle: "Oct 2025 - Jan 2025",
+        skills: "React Flow · React.js · Redux.js",
+        assosiatedWith: "Associated with Target",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Target_logo.svg",
+        redirection: "https://www.target.com/",
+    },
+    "Kelsa UI": {
+        heading: "Kelsa UI",
+        title: "A Revamp of the Kelsa UI Platform, a core data engineering platform at target",
+        subtitle: "Jan 2024 - Sep 2024",
+        skills: "React Flow · React.js · Redux.js",
+        assosiatedWith: "Associated with Target",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Target_logo.svg",
+        redirection: "https://www.target.com/",
+    },
     "Allocation Engine": {
         heading: "Allocation Engine",
         title: "This platform assists Yubi investor entities in securing the most suitable and efficient investment deals.",

@@ -26,7 +26,7 @@ export default function ResumeComponent() {
           }
         `}
             </style>
-            <Document file={"Resume.pdf"}>
+            <Document file={"NewResume.pdf"}>
                 <Page scale={scale} pageIndex={0} />
             </Document>
             <div className={Styles.PdfScale}>
