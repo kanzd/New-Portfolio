@@ -5,26 +5,15 @@ import Styles from "../../styles/components/project.module.css";
 interface projectComponent {
     setProject: Function,
     setCurrentRoute: Function,
+    projectList:Array<string>
 }
-export default function ProjectComponent({ setProject, setCurrentRoute }: projectComponent) {
+export default function ProjectComponent({ setProject, setCurrentRoute,projectList }: projectComponent) {
     return (
         <div className={Styles.projectRoot}>
-            <Folder folderType='file' folderName='Allocation Engine' onClick={() => {
-                setProject("Allocation Engine");
+            {projectList.map((value,index)=>( <Folder folderType='file' folderName={value} onClick={() => {
+                setProject(value);
                 setCurrentRoute("/projectdetail");
-            }} />
-            <Folder folderType='file' folderName='Phoenix' onClick={() => {
-                setProject("Phoenix");
-                setCurrentRoute("/projectdetail");
-            }} />
-            <Folder folderType='file' folderName='Selfie Module' onClick={() => {
-                setProject("Selfie Module");
-                setCurrentRoute("/projectdetail");
-            }} />
-            <Folder folderType='file' folderName='Payout' onClick={() => {
-                setProject("Payout");
-                setCurrentRoute("/projectdetail");
-            }} />
+            }} />))}
         </div>
     )
 }

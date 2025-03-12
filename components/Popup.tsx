@@ -149,7 +149,7 @@ export function PopupBody({ type, currentRoute, setCurrentRoutes, setBackButton 
                 setCurrentRoutes("/projects");
                 setBackButton(true);
             }} />,
-            "/projects": <ProjectComponent setCurrentRoute={setCurrentRoutes} setProject={setClickProject} />,
+            "/projects": <ProjectComponent projectList={Object.keys(projectDetails)} setCurrentRoute={setCurrentRoutes} setProject={setClickProject} />,
             "/resume": <ResumeComponent />,
             "/projectdetail": <ProjectDetailsComponents logo={logo} assosiatedWith={assosiatedWith} heading={heading} skills={skills} subtitle={subtitle} title={title} redirection={redirection} />
         }), []);
