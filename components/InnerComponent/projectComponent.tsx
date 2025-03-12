@@ -10,7 +10,7 @@ interface projectComponent {
 export default function ProjectComponent({ setProject, setCurrentRoute,projectList }: projectComponent) {
     return (
         <div className={Styles.projectRoot}>
-            {projectList.map((value,index)=>( <Folder folderType='file' folderName={value} onClick={() => {
+            {projectList.map((value,index)=>( <Folder noFullWidth folderType='file' folderName={value} onClick={() => {
                 setProject(value);
                 setCurrentRoute("/projectdetail");
             }} />))}
