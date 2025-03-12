@@ -7,7 +7,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 export default function ResumeComponent() {
     const handleDownload = () => {
         const a = document.createElement('a');
-        a.href = "Resume.pdf";
+        a.href = "NewResume.pdf";
         a.download = 'downloaded-pdf.pdf';
         document.body.appendChild(a);
         a.click();

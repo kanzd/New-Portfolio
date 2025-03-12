@@ -10,7 +10,7 @@ import LoaderComponent from "../components/Loading";
 import Power from "../components/PowerOn";
 const IndexPage = () => {
   const [type, setType] = useState<"Details" | "Folder">("Details");
-  const [showPopup, setShowPopup] = useState(true);
+  const [showPopup, setShowPopup] = useState(false);
   const [headerTitle, setHeaderTitle] = useState('');
   const ref = useRef(null);
   const [bgColor, setBgColor] = useState("#848482");

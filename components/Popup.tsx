@@ -144,7 +144,7 @@ export function PopupBody({ type, currentRoute, setCurrentRoutes, setBackButton 
                         Kanishk Dixit
                     </h1>
                     <div className={`${Styles.PopupBodyInnerTitle} ${Styles.PopupBodyInnerSubTitle}`}>
-                        It's all a game avoiding failure
+                        Hello!
                     </div>
                     <div className={Styles.PopupTitles}>
                         Originally from Meerut City but have lived in the Delhi and am currently in Bangalore. I enjoy traveling and experiencing other cultures. The world and its people are amazing!
