@@ -40,7 +40,7 @@ const projectDetails = {
     },
     "Kelsa UI": {
         heading: "Kelsa UI",
-        title: "A Revamp of the Kelsa UI Platform, a core data engineering platform at target",
+        title: "A revamp of the Kelsa UI Platform, a fundamental data engineering platform for the creation and management of data pipelines at Target.",
         subtitle: "Jan 2024 - Sep 2024",
         skills: "React Flow · React.js · Redux.js",
         assosiatedWith: "Associated with Target",
